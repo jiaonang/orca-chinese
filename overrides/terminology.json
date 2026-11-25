@@ -1,0 +1,42 @@
+{
+  "$comment": "术语规则：构建时按顺序应用。conditionalReplacements 仅当英文原文命中 include 且未命中 exclude 时替换。",
+  "globalReplacements": [
+    {
+      "description": "统一第二人称，与 Orca 英文原文的口语语气一致",
+      "from": "您",
+      "to": "你"
+    },
+    {
+      "description": "标签页统一为「标签页」，不再混用「选项卡」",
+      "from": "选项卡",
+      "to": "标签页"
+    },
+    {
+      "description": "删除中文与标点之间多余的空格",
+      "from": " ，",
+      "to": "，"
+    }
+  ],
+  "conditionalReplacements": [
+    {
+      "description": "AI agent 统一译作「智能体」；proxy、user agent、Google Agent Platform 仍保留「代理」",
+      "englishInclude": "\\bagents?\\b",
+      "englishExclude": "proxy|user agent|Agent Platform|ssh[- ]?agent|authentication agent",
+      "from": "代理",
+      "to": "智能体"
+    }
+  ],
+  "glossary": {
+    "agent": "智能体",
+    "workspace": "工作区",
+    "worktree": "工作树",
+    "review": "评审",
+    "pull request": "拉取请求",
+    "issue": "议题",
+    "tab": "标签页",
+    "terminal": "终端",
+    "repository": "仓库",
+    "settings": "设置",
+    "extension": "扩展"
+  }
+}
